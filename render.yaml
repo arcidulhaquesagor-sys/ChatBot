@@ -6,7 +6,5 @@ services:
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: GEMINI_API_KEY
-        sync: false          # must be set manually in the Render dashboard
-      - key: PYTHON_VERSION
-        value: 3.12.0
+        sync: false   # Set this manually in Render → Environment tab, NOT here
     autoDeploy: true
